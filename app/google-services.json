@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "472250155201",
+    "firebase_url": "https://fcm-example-36843.firebaseio.com",
+    "project_id": "fcm-example-36843",
+    "storage_bucket": "fcm-example-36843.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472250155201:android:43d25801aae4ac46",
+        "android_client_info": {
+          "package_name": "xyz.sleepygamers.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472250155201-rfk1707uqk1tko52a15gjd11mdm1184v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGqSzbaAajByn4hcXgDaNUkyILdarO6NA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
