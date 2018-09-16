@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
+import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import java.util.Map;
@@ -41,8 +42,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         NotificationCompat.BigTextStyle bigText = new NotificationCompat.BigTextStyle();
         bigText.bigText(messageBody.get("message"));
         bigText.setBigContentTitle(messageBody.get("title"));
-        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this,
+                getString(R.string.default_notification_channel_id))
                 .setContentTitle(messageBody.get("title"))
                 .setContentText(messageBody.get("message"))
                 .setAutoCancel(true)

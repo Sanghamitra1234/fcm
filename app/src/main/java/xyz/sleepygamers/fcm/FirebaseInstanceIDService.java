@@ -12,6 +12,7 @@ import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
+import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import java.io.IOException;
@@ -44,7 +45,9 @@ public class FirebaseInstanceIDService extends FirebaseMessagingService {
         NotificationCompat.BigTextStyle bigText = new NotificationCompat.BigTextStyle();
         bigText.bigText(messageBody.get("message"));
         bigText.setBigContentTitle(messageBody.get("title"));
-        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this,
+                getString(R.string.default_notification_channel_id))
+                .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(messageBody.get("title"))
                 .setContentText(messageBody.get("message"))
                 .setAutoCancel(true)
